@@ -47,7 +47,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/LoginButton"
+                android:id="@+id/loginButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -59,11 +59,12 @@
                 android:layout_weight="0" />
 
             <Button
-                android:id="@+id/SingUpButton"
+                android:id="@+id/singUpButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Registrace" />
+
         </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
