@@ -1,15 +1,11 @@
- package com.example.neopetcarev1
+package com.example.neopetcarev1
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 
-class HomeActiviy : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home_activiy)
+        setContentView(R.layout.activity_home)
     }
-
-
-
-
 }
