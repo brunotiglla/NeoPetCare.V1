@@ -29,19 +29,17 @@
             android:textColorHighlight="#2196F3"
             android:textSize="36sp" />
 
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="15dp" />
+
         <EditText
             android:id="@+id/nuevoLista"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Añadir Nuevo Registro"
-            android:focusable="false"
-            android:clickable="true"
             android:inputType="textPersonName" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
 
         <Space
             android:layout_width="match_parent"
