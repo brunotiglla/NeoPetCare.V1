@@ -21,7 +21,7 @@ class HomeActivity : AppCompatActivity() {
         //cambiosCitas()
         //cambiosComida()
         //cambiosPerfil()
-        //cambiosVacunas()
+        cambiosVacunas()
     }
 
 
@@ -36,13 +36,24 @@ class HomeActivity : AppCompatActivity() {
     fun cambiosPerfil(){}
 
     // LLamar a la clase(ventanta) Vacunas
-    fun cambiosVacunas(){}
+    fun cambiosVacunas(){
+
+        val btnVacuna = findViewById<Button>(R.id.btnVacunas)
+
+        btnVacuna.setOnClickListener {
+            val intent = Intent(this, VacunasActivity::class.java)
+            startActivity(intent)
+        }
+
+    }
 
     // LLamar a la clase(ventanta) Comida
     fun cambiosComida(){}
 
     // LLamar a la clase(ventanta) Citas
     fun cambiosCitas(){}
+
+
 
 
     // LLamar a la clase(ventanta) Baños
