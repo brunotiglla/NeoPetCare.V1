@@ -6,4 +6,80 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtInicio"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="INICIO"
+            android:textColor="#040303"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textModificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bienvenido Usuario" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+        <Button
+            android:id="@+id/btnPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Perfil de Usuario" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnVacunas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de Vacunas" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnComida"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de Comida" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnCitas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de Citas" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnBaños"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registro de Baños" />
+
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
