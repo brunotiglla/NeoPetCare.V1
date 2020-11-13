@@ -1,10 +1,9 @@
 package com.example.neopetcarev1
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import org.w3c.dom.Text
-import android.widget.*
+import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
 
 
 
@@ -19,7 +18,7 @@ class HomeActivity : AppCompatActivity() {
 
         cambioBaños()
         //cambiosCitas()
-        //cambiosComida()
+        cambiosComida()
         //cambiosPerfil()
         cambiosVacunas()
     }
@@ -35,25 +34,27 @@ class HomeActivity : AppCompatActivity() {
     // LLamar a la clase(ventanta) Perfil
     fun cambiosPerfil(){}
 
+
     // LLamar a la clase(ventanta) Vacunas
     fun cambiosVacunas(){
-
         val btnVacuna = findViewById<Button>(R.id.btnVacunas)
-
         btnVacuna.setOnClickListener {
             val intent = Intent(this, VacunasActivity::class.java)
             startActivity(intent)
         }
-
     }
 
     // LLamar a la clase(ventanta) Comida
-    fun cambiosComida(){}
+    fun cambiosComida(){
+        val btnComida = findViewById<Button>(R.id.btnComida)
+        btnComida.setOnClickListener{
+            val intent = Intent(this, RegistroAlimenticios::class.java)
+            startActivity((intent))
+        }
+    }
 
     // LLamar a la clase(ventanta) Citas
     fun cambiosCitas(){}
-
-
 
 
     // LLamar a la clase(ventanta) Baños

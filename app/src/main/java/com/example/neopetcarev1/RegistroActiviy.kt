@@ -1,12 +1,11 @@
 package com.example.neopetcarev1
 
 import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import org.w3c.dom.Text
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
  class RegistroActiviy : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

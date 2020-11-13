@@ -1,46 +1,51 @@
 package com.example.neopetcarev1
 
-import android.content.Intent
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.Button
+import android.widget.EditText
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import org.jetbrains.anko.find
 
-class BaniosActivity : AppCompatActivity() {
+class BaniosActivity : AppCompatActivity()  {
+    var fruits = mutableListOf<String>("")
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_banios)
 
+
         // Nuevas Funciones
 
-        FuncionesBasicas()
+        val myRecyclerView: RecyclerView = find(R.id.RecyclerViewL)
+        myRecyclerView.layoutManager = LinearLayoutManager(this)
+
+
+
+        // Funciones conocidas
+
+        val btnAddBanios = findViewById<Button>(R.id.button4)
+        btnAddBanios.setOnClickListener {
+            NuevoTexto()
+            myRecyclerView.adapter = MyAdapter(fruits)
+        }
 
     }
 
-    fun FuncionesBasicas(){
+    fun NuevoTexto(): MutableList<String> {
+        var editText = findViewById<EditText>(R.id.editTxtAdd)
 
-        val btnListas = findViewById<Button>(R.id.btnBaños)
-        val nuevoBanio = findViewById<EditText>(R.id.nuevoLista)
-        val listaNew = findViewById<ListView>(R.id.ListaBanios)
+        val newEditText = editText.text
+        fruits.add("$newEditText")
 
-
-
-      //  val productos = Producto("brayan", "20/10/2027", "se baño en la mañana")
-      //  val ListaProductos = listOf<Producto>(productos)
-       // val adapter = ProductoAdapter(this, ListaProductos)
-
-       // listaNew.adapter = adapter
-
-
-
-
-       /* btnListas.setOnClickListener {
-            val intent = Intent(this, BaniosActivity::class.java)
-             startActivity(intent)
-       }*/
-
-
-
+        return fruits
     }
+
+
+
+
 
 
 }
