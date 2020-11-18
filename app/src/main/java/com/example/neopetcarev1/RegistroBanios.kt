@@ -10,7 +10,7 @@ import android.widget.TimePicker
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
-class RegistroAlimenticios : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
+class RegistroBanios : AppCompatActivity(), DatePickerDialog.OnDateSetListener, TimePickerDialog.OnTimeSetListener {
 
     var day = 0
     var month = 0
@@ -24,13 +24,15 @@ class RegistroAlimenticios : AppCompatActivity(), DatePickerDialog.OnDateSetList
     var savedHour = 0
     var savedMinute = 0
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_registro_alimenticios)
+        setContentView(R.layout.activity_registro_banios)
 
-        pickData()
+
+        pickDate()
+
     }
-
     private fun getDateTimneCalander(){
         val cal = Calendar.getInstance()
         day = cal.get(Calendar.DAY_OF_YEAR)
@@ -38,17 +40,19 @@ class RegistroAlimenticios : AppCompatActivity(), DatePickerDialog.OnDateSetList
         year = cal.get(Calendar.YEAR)
         hour = cal.get(Calendar.HOUR)
         minute = cal.get(Calendar.MINUTE)
+
     }
 
-    private fun pickData(){
-        val btnAddComida = findViewById<Button>(R.id.btnAddComidas)
+    private fun pickDate(){
+        val btnAddBanio = findViewById<Button>(R.id.btnAddBanios)
 
-        btnAddComida.setOnClickListener {
+        btnAddBanio.setOnClickListener {
             getDateTimneCalander()
 
             DatePickerDialog(this,this, year, month, day).show()
         }
     }
+
 
 
     override fun onDateSet(view: DatePicker?, year: Int, month: Int, dayOfMonth: Int) {
@@ -61,12 +65,13 @@ class RegistroAlimenticios : AppCompatActivity(), DatePickerDialog.OnDateSetList
     }
 
     override fun onTimeSet(view: TimePicker?, hourOfDay: Int, minute: Int) {
-        val txtComida = findViewById<TextView>(R.id.txtHorrarioComida)
+        val txt = findViewById<TextView>(R.id.txtNewTimer)
 
         savedHour = hourOfDay
         savedMinute = minute
 
-        txtComida.text = "$savedDay-$savedMonth-$savedYear\t   $savedHour:$savedMinute"
+        txt.text = "$savedDay-$savedMonth-$savedYear\t     $savedHour:$savedMinute"
+
     }
 
 

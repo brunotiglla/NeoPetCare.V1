@@ -45,7 +45,7 @@ class AuthActivity : AppCompatActivity() {
             }else {
 
                 // Funcion para activar el boton
-                val intent = Intent(this, HomeActivity::class.java)
+                val intent = Intent(this, ListaDeMascotas::class.java)
                 startActivity(intent)
             }
         }

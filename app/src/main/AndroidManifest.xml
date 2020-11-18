@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.neopetcarev1">
 
     <application
@@ -9,9 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NeoPetCareV1">
-        <activity android:name=".RegistroAlimenticios"></activity>
+        <activity android:name=".ListaDeMascotas"></activity>
+        <activity android:name=".RegistroBanios" />
+        <activity android:name=".RegistroAlimenticios" />
         <activity android:name=".VacunasActivity" />
-        <activity android:name=".BaniosActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".RegistroActiviy" />
         <activity android:name=".AuthActivity">

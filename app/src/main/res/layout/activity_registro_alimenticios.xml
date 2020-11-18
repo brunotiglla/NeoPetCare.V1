@@ -6,19 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".RegistroAlimenticios">
 
-    <EditText
-        android:id="@+id/editTxtAdd2"
-        android:layout_width="268dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="20dp"
-        android:ems="10"
-        android:hint="Registrar Nuevo"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtRegistroBaños2" />
-
     <TextView
         android:id="@+id/txtRegistroBaños2"
         android:layout_width="wrap_content"
@@ -36,33 +23,22 @@
         android:id="@+id/btnAddComidas"
         android:layout_width="196dp"
         android:layout_height="51dp"
-        android:layout_marginTop="20dp"
-        android:text="Añadir  Comida"
+        android:layout_marginTop="48dp"
+        android:text="Horrario de Comida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTxtAdd2" />
+        app:layout_constraintTop_toBottomOf="@+id/txtRegistroBaños2" />
 
-    <FrameLayout
-        android:id="@+id/frameLayout"
-        android:layout_width="364dp"
-        android:layout_height="411dp"
-        android:layout_marginTop="32dp"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.489"
+    <TextView
+        android:id="@+id/txtHorrarioComida"
+        android:layout_width="269dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="140dp"
+        android:hint="Registro de Comidas"
+        android:textSize="22sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnAddComidas">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/RecyclerViewL"
-            android:layout_width="320dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:scrollbarSize="100dp">
-
-        </androidx.recyclerview.widget.RecyclerView>
-    </FrameLayout>
+        app:layout_constraintTop_toBottomOf="@+id/btnAddComidas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

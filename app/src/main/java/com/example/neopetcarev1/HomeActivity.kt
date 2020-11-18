@@ -16,11 +16,16 @@ class HomeActivity : AppCompatActivity() {
         //cambioTexto()
 
 
-        cambioBaños()
+        cambioBanios()
+
         //cambiosCitas()
+
         cambiosComida()
+
         //cambiosPerfil()
+
         cambiosVacunas()
+
     }
 
 
@@ -38,6 +43,7 @@ class HomeActivity : AppCompatActivity() {
     // LLamar a la clase(ventanta) Vacunas
     fun cambiosVacunas(){
         val btnVacuna = findViewById<Button>(R.id.btnVacunas)
+
         btnVacuna.setOnClickListener {
             val intent = Intent(this, VacunasActivity::class.java)
             startActivity(intent)
@@ -49,7 +55,7 @@ class HomeActivity : AppCompatActivity() {
         val btnComida = findViewById<Button>(R.id.btnComida)
         btnComida.setOnClickListener{
             val intent = Intent(this, RegistroAlimenticios::class.java)
-            startActivity((intent))
+            startActivity(intent)
         }
     }
 
@@ -58,11 +64,11 @@ class HomeActivity : AppCompatActivity() {
 
 
     // LLamar a la clase(ventanta) Baños
-    fun cambioBaños(){
+    fun cambioBanios(){
+        val btnBanios = findViewById<Button>(R.id.btnBaños)
 
-        val btnBaño = findViewById<Button>(R.id.btnBaños)
-        btnBaño.setOnClickListener {
-            val intent = Intent(this, BaniosActivity::class.java)
+        btnBanios.setOnClickListener {
+            val intent = Intent(this,  RegistroBanios::class.java)
             startActivity(intent)
         }
 
