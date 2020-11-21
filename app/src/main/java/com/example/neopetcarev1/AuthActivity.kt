@@ -43,9 +43,8 @@ class AuthActivity : AppCompatActivity() {
             if (textID.text.isEmpty()||textPass.text.isEmpty()){
                 Toast.makeText(this, "Campos Incomplestos", Toast.LENGTH_SHORT).show()
             }else {
-
                 // Funcion para activar el boton
-                val intent = Intent(this, ListaDeMascotas::class.java)
+                val intent = Intent(this, InicioMascota::class.java)
                 startActivity(intent)
             }
         }

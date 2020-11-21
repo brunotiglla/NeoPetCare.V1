@@ -42,6 +42,7 @@ class RegistroActiviy : AppCompatActivity() {
 
                 val user: Usuario = Usuario(0, "", "", "", correo.text.toString(), "",usuario.text.toString(), pass.text.toString())
 
+
                 RetrofitClient.instance.crearUsuario(user).enqueue(object: Callback<Void> {
                     override fun onResponse(call: Call<Void>, response: Response<Void>) {
                         Toast.makeText(applicationContext, "Se Registro Exitosamente", Toast.LENGTH_SHORT).show()
