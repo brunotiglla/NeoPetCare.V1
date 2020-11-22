@@ -24,7 +24,7 @@
         android:layout_width="196dp"
         android:layout_height="51dp"
         android:layout_marginTop="48dp"
-        android:text="Horrario de Comida"
+        android:text="Horario de Comida"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"

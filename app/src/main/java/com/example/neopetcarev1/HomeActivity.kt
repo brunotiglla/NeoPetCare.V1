@@ -17,12 +17,11 @@ class HomeActivity : AppCompatActivity() {
 
 
         cambioBanios()
-
         //cambiosCitas()
 
         cambiosComida()
 
-        //cambiosPerfil()
+        cambiosPerfil()
 
         cambiosVacunas()
 
@@ -37,7 +36,15 @@ class HomeActivity : AppCompatActivity() {
     }*/
 
     // LLamar a la clase(ventanta) Perfil
-    fun cambiosPerfil(){}
+    fun cambiosPerfil(){
+        val btnPerfil = findViewById<Button>(R.id.btnPerfilMascota)
+
+        btnPerfil.setOnClickListener {
+            val intent = Intent(this, Perfil_Mascota_Editar::class.java)
+            startActivity(intent)
+        }
+
+    }
 
 
     // LLamar a la clase(ventanta) Vacunas

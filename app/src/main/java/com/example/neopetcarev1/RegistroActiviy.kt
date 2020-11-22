@@ -30,12 +30,14 @@ class RegistroActiviy : AppCompatActivity() {
         val pass = findViewById<EditText>(R.id.editPasswordTextR)
 
         // variable para el boton registro
-        val btnRegistrace = findViewById<Button>(R.id.singUpButton)
+        val btnRegistrace = findViewById<Button>(R.id.singUpButtonR)
 
 
         btnRegistrace.setOnClickListener {
+
             if (usuario.text.isEmpty() || correo.text.isEmpty() || pass.text.isEmpty()){
                 Toast.makeText(this, "Daton Insuficientes", Toast.LENGTH_SHORT).show()
+
             }else{
 
                 //Toast.makeText(this, "Se Registro Exitosamente", Toast.LENGTH_SHORT).show()
@@ -53,19 +55,12 @@ class RegistroActiviy : AppCompatActivity() {
                     override fun onFailure(call: Call<Void>, t: Throwable) {
                         Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
                     }
-
-
                 })
 
                 //val intent = Intent(this, AuthActivity::class.java)
                 //startActivity(intent)
             }
         }
-
-
-
-
-
 
     }
 

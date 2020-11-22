@@ -36,10 +36,10 @@
             android:layout_height="20dp" />
 
         <Button
-            android:id="@+id/btnPerfil"
+            android:id="@+id/btnPerfilMascota"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Perfil de Usuario" />
+            android:text="Perfil de Mascota" />
 
         <Space
             android:layout_width="match_parent"

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_inicio_mascota.*
 
+
 class InicioMascota : AppCompatActivity(), RecyclerAdapter.OnAnimalClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +51,11 @@ class InicioMascota : AppCompatActivity(), RecyclerAdapter.OnAnimalClickListener
         val intent = Intent(this, HomeActivity::class.java)
         startActivity(intent)
     }
+
+
+
+
+
 
 
 }

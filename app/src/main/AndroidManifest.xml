@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NeoPetCareV1"
         android:usesCleartextTraffic="true">
-        <activity android:name=".InicioMascota"></activity>
+        <activity android:name=".Perfil_Mascota_Editar"></activity>
+        <activity android:name=".InicioMascota" />
         <activity android:name=".ListaDeMascotas" />
         <activity android:name=".RegistroBanios" />
         <activity android:name=".RegistroAlimenticios" />
