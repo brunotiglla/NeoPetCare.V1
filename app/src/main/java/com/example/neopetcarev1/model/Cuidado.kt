@@ -1,7 +1,6 @@
 package com.example.neopetcarev1.model
 
 data class Cuidado(
-        var idCuidado: Long,
+        var id_cuidado: Long,
         var nombre: String,
-        var registro_cuidado: List<RegistroCuidado>
 )

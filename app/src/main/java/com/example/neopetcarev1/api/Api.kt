@@ -18,6 +18,10 @@ interface Api {
     @PUT("api/usuario/actualizarUsuario/{idUsuario}")
     fun actualizarUsuario(@Path("codUsuario") codUsuario: Long, @Body usuario: Usuario): Call<Void>
 
+    //LOGIN
+    @POST("/api/usuario/login")
+    fun login(@Body usuario: Usuario): Call<Usuario>
+
 
     //CREAR MASCOTA
     @POST("api/mascota/registrarMascota/{codUsuario}")
@@ -31,14 +35,18 @@ interface Api {
     @DELETE("api/mascota/eliminarMascota/{codigo}")
     fun eliminarMascota(@Path("codigo") codigo:Long): Call<Void>
 
+    //LISTAR MASCOTAS
+    @GET("/api/mascota/listarMascotasporUsuario/{idUsuario}")
+    fun listarMascotas(@Path("idUsuario") idUsuario: Long): Call<MutableList<Mascota>>
 
-    //REGISTRAR CUIDADO
-    @POST("api/cuidado/registrar")
-    fun registrarCuidado(@Body cuidado: Cuidado): Call<Void>
+
+    //REGISTRAR CUIDADO DE MASCOTA
+    @POST("api/registroCuidado/registrarCuidado/{idMascota}")
+    fun registrarCuidadoMascota(@Path("idMascota") idMascota: Long, @Body registroCuidado: RegistroCuidado): Call<Void>
 
 
-    //REGISTRAR VACUNA
-    @POST("api//vacuna/registrarVacuna/{idTipoMascota}")
-    fun registrarVacuna(@Path("idTipoMascota") idTipoMascota: Long, @Body vacuna: Vacuna): Call<Void>
+    //REGISTRAR VACUNA DE UNA MASCOTA
+    @POST("api/vacunamascota/registrarVacunaMascota/{idMascota}")
+    fun registrarVacunaMascota(@Path("idMascota") idMascota: Long, @Body vacunaMascota: VacunaMascota): Call<Void>
 
 }

@@ -3,9 +3,9 @@ package com.example.neopetcarev1.model
 import java.util.*
 
 data class Cita(
-        var idCita: Long,
-        var veterinario: Veterinario,
-        var mascota: Mascota,
+        var id_cita: Long,
+        var estado: Boolean,
         var fecha: Date,
-        var estado: Boolean
+        var mascota: Long,
+        var veterinario: Long
 )

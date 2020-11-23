@@ -6,6 +6,12 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.neopetcarev1.api.RetrofitClient
+import com.example.neopetcarev1.model.Mascota
+import com.example.neopetcarev1.model.Usuario
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 
 class AuthActivity : AppCompatActivity() {
@@ -18,6 +24,9 @@ class AuthActivity : AppCompatActivity() {
         botonCambioRegistro()
     }
 
+    companion object{
+        lateinit var mascotas: MutableList<Mascota>
+    }
 
     fun botonCambioRegistro(){
 
@@ -44,8 +53,27 @@ class AuthActivity : AppCompatActivity() {
                 Toast.makeText(this, "Campos Incomplestos", Toast.LENGTH_SHORT).show()
             }else {
                 // Funcion para activar el boton
-                val intent = Intent(this, InicioMascota::class.java)
-                startActivity(intent)
+
+                var us: Usuario = Usuario(1,"","","",textID.text.toString(),"","",textPass.text.toString())
+
+                //listar las mascotas
+
+                RetrofitClient.instance.listarMascotas(us.id_usuario).enqueue(object: Callback<MutableList<Mascota>>{
+                    override fun onResponse(call: Call<MutableList<Mascota>>, response: Response<MutableList<Mascota>>) {
+                        mascotas = response.body()!!
+                        val intent = Intent(applicationContext, InicioMascota::class.java)
+                        startActivity(intent)
+                    }
+
+                    override fun onFailure(call: Call<MutableList<Mascota>>, t: Throwable) {
+                        Toast.makeText(applicationContext, t.message, Toast.LENGTH_LONG).show()
+                    }
+
+                })
+
+
+                    }
+
             }
         }
     }
@@ -53,6 +81,6 @@ class AuthActivity : AppCompatActivity() {
 
 
 
-}
+
 
 

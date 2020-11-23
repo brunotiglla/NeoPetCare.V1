@@ -1,14 +1,12 @@
 package com.example.neopetcarev1.model
 
 data class Veterinario(
-        var idVeterinario: Long,
-        var nombre: String,
+        var id_veterinario: Long,
         var apellido: String,
-        var direccion_consultorio: String,
-        var correo: String,
         var celular: String,
-        var username: String,
+        var correo: String,
+        var direccion_consultorio: String,
+        var nombre: String,
         var password: String,
-        var horarios: List<Horario>,
-        var citas: List<Cita>
+        var username: String
 )

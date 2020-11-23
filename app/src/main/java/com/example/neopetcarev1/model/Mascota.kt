@@ -5,9 +5,6 @@ data class Mascota(
         var nombre: String,
         var edad: Int,
         var peso: Double,
-        var registro_cuidados: List<RegistroCuidado>,
-        var citas: List<Cita>,
-        var registro_vacunas: List<VacunaMascota>,
-        var usuario: Usuario,
-        var tipomascota: TipoMascota
+        var tipomascota: Long,
+        var usuario: Long
 )
